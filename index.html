@@ -6,65 +6,108 @@
     <meta name="description" content="Estudio Jurídico Díaz Paz Mella - Abogados especializados en diversas áreas del derecho">
     <title>Díaz Paz Mella - Estudio Jurídico</title>
     <style>
+        /* Reset and basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            margin: 0;
-            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
         }
-
-        header {
+        
+        /* Sidebar styling */
+        .sidebar {
             background-color: #003E6B;
             color: white;
-            padding: 20px 0;
+            width: 250px;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar h1 {
             text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
 
         .logo {
-            width: 150px;
-            margin: 0 auto;
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
         }
 
-        nav {
-            background-color: #1A3E59;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
+        .sidebar nav a {
             color: white;
             text-decoration: none;
-            padding: 0 15px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .intro {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
             text-align: center;
-            padding: 50px 20px;
         }
 
-        .intro h1 {
-            font-size: 2.5em;
+        .sidebar nav a:hover {
+            background-color: #1A3E59;
+        }
+
+        /* Main content styling */
+        .main-content {
+            margin-left: 250px;
+            padding: 40px;
+            flex: 1;
+        }
+
+        .intro, .services, .team-section, .testimonials {
+            margin-bottom: 40px;
+        }
+
+        .intro h2, .services h2, .team-section h2, .testimonials h2 {
             color: #003E6B;
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
 
-        .intro p {
-            font-size: 1.2em;
-            color: #333;
+        .intro p, .services p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
         }
 
+        /* Services styling */
+        .services {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            flex: 1 1 45%;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .service h3 {
+            color: #003E6B;
+            margin-bottom: 10px;
+        }
+
+        /* Team section styling */
         .team-section {
             display: flex;
             justify-content: center;
-            padding: 20px;
+            gap: 20px;
         }
 
         .team-member {
-            margin: 0 15px;
             text-align: center;
         }
 
@@ -87,95 +130,104 @@
             text-decoration: underline;
         }
 
+        /* Testimonials styling */
         .testimonials {
             background-color: #f0f0f0;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .testimonials h2 {
-            color: #003E6B;
+            padding: 20px;
+            border-radius: 8px;
         }
 
         .testimonial {
             margin: 20px;
-        }
-
-        .testimonial p {
             font-style: italic;
         }
 
+        /* Footer styling */
         footer {
             background-color: #003E6B;
             color: white;
             text-align: center;
-            padding: 20px;
-        }
-
-        footer p {
-            margin: 0;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        <img src="LOGO.jpg" alt="Díaz Paz Mella Logo" width="150px">
-    </div>
+<!-- Sidebar navigation -->
+<div class="sidebar">
+    <img src="LOGO.jpg" alt="Díaz Paz Mella Logo" class="logo">
     <h1>Díaz Paz Mella</h1>
-    <p>Estudio Jurídico</p>
-</header>
+    <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</div>
 
-<nav>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#equipo">Equipo</a>
-    <a href="#testimonios">Testimonios</a>
-    <a href="#contacto">Contacto</a>
-</nav>
+<!-- Main content -->
+<div class="main-content">
+    <section class="intro" id="nosotros">
+        <h2>Bienvenido a Díaz Paz Mella</h2>
+        <p>En el Estudio Jurídico Díaz Paz Mella, estamos comprometidos con la excelencia en el servicio legal, guiados por principios de ética, responsabilidad y vocación de servicio. Nuestra misión es brindar asesoramiento integral y soluciones efectivas a nuestros clientes.</p>
+    </section>
 
-<section class="intro" id="nosotros">
-    <h1>Compromiso con la Justicia y la Ética</h1>
-    <p>En el Estudio Jurídico Díaz Paz Mella, nos comprometemos a ofrecer servicios legales de excelencia, guiados por los principios de ética, responsabilidad y vocación de servicio. Nuestro equipo de abogados se especializa en diversas áreas del derecho, brindando asesoramiento integral y soluciones eficientes para nuestros clientes.</p>
-    <p>Con un enfoque humano y cercano, buscamos no solo resolver problemas legales, sino también contribuir al bienestar de quienes confían en nosotros. Nuestra visión es acompañar a cada cliente en su proceso, garantizando el respeto a los derechos y el cumplimiento de las leyes.</p>
-</section>
+    <section class="services" id="servicios">
+        <h2>Servicios</h2>
+        <div class="service">
+            <h3>Derecho Civil</h3>
+            <p>Asesoría y representación en asuntos de derecho civil, incluyendo contratos, responsabilidad civil y conflictos familiares.</p>
+        </div>
+        <div class="service">
+            <h3>Derecho Laboral</h3>
+            <p>Apoyo en conflictos laborales, despidos injustificados, y negociación de acuerdos laborales para trabajadores y empleadores.</p>
+        </div>
+        <div class="service">
+            <h3>Derecho Penal</h3>
+            <p>Defensa en causas penales, protección de derechos y garantías, con un enfoque en la justicia y la transparencia.</p>
+        </div>
+        <div class="service">
+            <h3>Asesoría Empresarial</h3>
+            <p>Consultoría en derecho corporativo para empresas, apoyo en la conformación de sociedades y cumplimiento legal.</p>
+        </div>
+    </section>
 
-<section class="team-section" id="equipo">
-    <div class="team-member">
-        <img src="AndreaPaz.jpg" alt="Andrea Paz Díaz">
-        <h3><a href="https://www.linkedin.com/in/andreapazdiaz/">Andrea Paz Díaz</a></h3>
-        <p>Abogada Especialista en Derecho Civil</p>
-    </div>
-    <div class="team-member">
-        <img src="GabrielaDiaz.jpg" alt="Gabriela Díaz Cruz">
-        <h3><a href="https://www.linkedin.com/in/gabrielad%C3%ADazcruz1992">Gabriela Díaz Cruz</a></h3>
-        <p>Abogada Especialista en Derecho Laboral</p>
-    </div>
-    <div class="team-member">
-        <img src="PedroLuis.jpg" alt="Pedro Luis Mella Jofré">
-        <h3><a href="https://www.linkedin.com/in/pedro-mella-jofr%C3%A9-3b103118b">Pedro Luis Mella Jofré</a></h3>
-        <p>Abogado Especialista en Derecho Penal</p>
-    </div>
-</section>
+    <section class="team-section" id="equipo">
+        <h2>Nuestro Equipo</h2>
+        <div class="team-member">
+            <img src="AndreaPaz.jpg" alt="Andrea Paz Díaz">
+            <h3><a href="https://www.linkedin.com/in/andreapazdiaz/">Andrea Paz Díaz</a></h3>
+            <p>Abogada Especialista en Derecho Civil</p>
+        </div>
+        <div class="team-member">
+            <img src="GabrielaDiaz.jpg" alt="Gabriela Díaz Cruz">
+            <h3><a href="https://www.linkedin.com/in/gabrielad%C3%ADazcruz1992">Gabriela Díaz Cruz</a></h3>
+            <p>Abogada Especialista en Derecho Laboral</p>
+        </div>
+        <div class="team-member">
+            <img src="PedroLuis.jpg" alt="Pedro Luis Mella Jofré">
+            <h3><a href="https://www.linkedin.com/in/pedro-mella-jofr%C3%A9-3b103118b">Pedro Luis Mella Jofré</a></h3>
+            <p>Abogado Especialista en Derecho Penal</p>
+        </div>
+    </section>
 
-<section class="testimonials" id="testimonios">
-    <h2>Testimonios</h2>
-
-    <div class="testimonial">
-        <p>"El equipo de Díaz Paz Mella me brindó un apoyo legal extraordinario en un caso complicado de derecho laboral. Su profesionalismo y dedicación me dieron la confianza que necesitaba para ganar el caso."</p>
-        <strong>- Juan Pérez, Ejecutivo de Recursos Humanos</strong>
-    </div>
-
-    <div class="testimonial">
-        <p>"Recomiendo encarecidamente al Estudio Jurídico Díaz Paz Mella. Me ayudaron a resolver un conflicto civil de manera rápida y eficiente, siempre con un enfoque ético y profesional."</p>
-        <strong>- María González, Propietaria de Empresa</strong>
-    </div>
-
-    <div class="testimonial">
-        <p>"Gracias a su expertise en derecho penal, pude defender mis derechos en una situación difícil. Estoy muy agradecido por su ayuda y por cómo manejaron todo con transparencia y eficacia."</p>
-        <strong>- Rodrigo Silva, Emprendedor</strong>
-    </div>
-</section>
+    <section class="testimonials" id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonial">
+            <p>"El equipo de Díaz Paz Mella me brindó un apoyo legal extraordinario en un caso complicado de derecho laboral. Su profesionalismo y dedicación me dieron la confianza que necesitaba para ganar el caso."</p>
+            <strong>- Juan Pérez, Ejecutivo de Recursos Humanos</strong>
+        </div>
+        <div class="testimonial">
+            <p>"Recomiendo encarecidamente al Estudio Jurídico Díaz Paz Mella. Me ayudaron a resolver un conflicto civil de manera rápida y eficiente, siempre con un enfoque ético y profesional."</p>
+            <strong>- María González, Propietaria de Empresa</strong>
+        </div>
+        <div class="testimonial">
+            <p>"Gracias a su expertise en derecho penal, pude defender mis derechos en una situación difícil. Estoy muy agradecido por su ayuda y por cómo manejaron todo con transparencia y eficacia."</p>
+            <strong>- Rodrigo Silva, Emprendedor</strong>
+        </div>
+    </section>
+</div>
 
 <footer id="contacto">
     <p>Contacto: +56 9 9454 7526 | pmellajofre@gmail.com</p>
